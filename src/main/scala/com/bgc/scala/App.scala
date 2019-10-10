@@ -9,7 +9,10 @@ object App {
     val sparkResources = SparkResources
 
     val prop = sparkResources.getPropertiesFile("C:\\Users\\aleja\\Downloads\\bgcExample\\src\\main\\resources\\")
-
+    
+    //In case that properties file need to be retrieved from HDFS
+    //val prop = sparkResources.HDFSServices.getPropertiesFile("hdfs://...")
+    
     //Get title.ratings.tsv
     val titleRatingsDF = sparkResources.readFileAsDF(prop.getProperty("path_ratings"))
 
