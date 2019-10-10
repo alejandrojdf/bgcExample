@@ -13,6 +13,9 @@ object SparkResources extends Serializable {
     .enableHiveSupport()
     .getOrCreate
 
+    //val HDFSServices = new HDFSServices(spark.sparkContext.hadoopConfiguration)
+
+  
   /**Function reads from a file to a DataFrame
    *
    * @param path Path to the source file
